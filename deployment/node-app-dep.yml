@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: node-app
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: node-app
+    spec:
+      containers:
+      - name: node-app
+        image: pharmon9847/node-app
+        ports:
+        - containerPort: 3000
